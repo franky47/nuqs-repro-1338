@@ -1,0 +1,25 @@
+{
+  "name": "nuqs-repro-1338",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.1.6",
+    "nuqs": "2.8.8",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": ["sharp"]
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
