@@ -18,6 +18,11 @@ first released in 2.9.0-beta.2: the rework of the internal state
 propagation in `useQueryStates` lets the update render inside the
 transition lane, where React's view transition can capture it.
 
+Confirmed at PR granularity with the pkg.pr.new preview build pinned to
+the PR head SHA (`pnpm add https://pkg.pr.new/nuqs@c92a4cdf56cf87a4580ce3464f54f4430dba1232`):
+fixed, while 2.9.0-beta.1 (the release immediately before, with no other
+`packages/nuqs/src` changes in between) is broken.
+
 To see the bug, check out the initial commit of this repo (nuqs 2.8.8).
 
 Two identical toggles rendered side by side, each swapping two elements
