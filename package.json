@@ -8,13 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "16.1.6",
-    "nuqs": "2.8.8",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "next": "16.2.10",
+    "nuqs": "2.9.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "pnpm": {
-    "ignoredBuiltDependencies": ["sharp"]
+    "ignoredBuiltDependencies": [
+      "sharp"
+    ]
   },
   "devDependencies": {
     "@types/node": "^24",

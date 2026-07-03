@@ -2,6 +2,24 @@
 
 Minimal reproduction for https://github.com/47ng/nuqs/issues/1338
 
+## Status: fixed in nuqs 2.9.0
+
+| nuqs         | next    | react  | result    |
+| ------------ | ------- | ------ | --------- |
+| 2.8.8        | 16.1.6  | 19.2.4 | ⚠️ broken |
+| 2.8.8        | 16.2.10 | 19.2.7 | ⚠️ broken |
+| 2.9.0-beta.1 | 16.2.10 | 19.2.7 | ⚠️ broken |
+| 2.9.0-beta.2 | 16.2.10 | 19.2.7 | ✅ fixed  |
+| 2.9.0        | 16.2.10 | 19.2.7 | ✅ fixed  |
+
+The fix landed in [`2d5fa8e`](https://github.com/47ng/nuqs/commit/2d5fa8eed3b0911902e64c5b8034520fcaad2940)
+(fix: stale value under Activity, [#1445](https://github.com/47ng/nuqs/pull/1445)),
+first released in 2.9.0-beta.2: the rework of the internal state
+propagation in `useQueryStates` lets the update render inside the
+transition lane, where React's view transition can capture it.
+
+To see the bug, check out the initial commit of this repo (nuqs 2.8.8).
+
 Two identical toggles rendered side by side, each swapping two elements
 inside React `<ViewTransition>` boundaries, updated in a `startTransition`:
 
